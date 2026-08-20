@@ -18,6 +18,10 @@ const precompilesDir = Path.resolve(
   import.meta.dirname,
   '../test/tempo/crates/contracts/src/precompiles',
 )
+const zonePortalAbiPath = Path.resolve(
+  import.meta.dirname,
+  './tempoAbis/zonePortal.json',
+)
 
 const compareStrings = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0)
 
@@ -257,6 +261,21 @@ for (const [interfaceName, interfaceData] of interfaces.entries()) {
   processedInterfaceData.push({ exportName, abi })
 }
 
+const supplementalAbiData: ProcessedInterface[] = [
+  {
+    exportName: 'zonePortal',
+    abi: JSON.parse(Fs.readFileSync(zonePortalAbiPath, 'utf-8')),
+  },
+]
+
+for (const { exportName, abi } of supplementalAbiData) {
+  Fs.appendFileSync(
+    out,
+    `export const ${exportName} = ${JSON.stringify(abi)} as const\n\n`,
+  )
+  processedInterfaceData.push({ exportName, abi })
+}
+
 // Generate concatenated `abis` export
 const exportNames: string[] = []
 for (const [interfaceName] of interfaces.entries()) {
@@ -283,6 +302,7 @@ for (const [interfaceName] of interfaces.entries()) {
     .join('')
   exportNames.push(exportName)
 }
+exportNames.push(...supplementalAbiData.map(({ exportName }) => exportName))
 
 Fs.appendFileSync(
   out,
@@ -353,5 +373,5 @@ for (const { exportName, abi } of processedInterfaceData) {
 }
 
 console.log(
-  `✓ Generated ${processedInterfaces.size} ABIs from ${files.length} precompile files`,
+  `✓ Generated ${processedInterfaceData.length} ABIs from ${files.length} precompile files and ${supplementalAbiData.length} supplemental ABI`,
 )

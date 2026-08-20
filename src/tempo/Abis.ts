@@ -3073,6 +3073,2239 @@ export const validatorConfigV2 = [
   { name: 'ValidatorNotFound', type: 'error', inputs: [] },
 ] as const
 
+export const zonePortal = [
+  {
+    type: 'function',
+    name: 'ABDICATION_DELAY',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'FIXED_DEPOSIT_GAS',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_DEPOSITS_PER_TEMPO_BLOCK',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_GAS_FEE_RATE',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_SEQUENCERS',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_TOKENS_ENABLED_PER_TEMPO_BLOCK',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_TOKEN_METADATA_BYTES',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'MAX_WITHDRAWAL_GAS_LIMIT',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'PAUSE_DURATION',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'abdicate',
+    inputs: [
+      {
+        name: 'capability',
+        type: 'uint8',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'abdicationEffectiveAt',
+    inputs: [
+      {
+        name: '',
+        type: 'uint8',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'acceptAdmin',
+    inputs: [],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'admin',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'areDepositsActive',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'blockHash',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'bouncebackGas',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'calculateBouncebackFee',
+    inputs: [],
+    outputs: [
+      {
+        name: 'fee',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'calculateDepositFee',
+    inputs: [],
+    outputs: [
+      {
+        name: 'fee',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'claimRefund',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: 'amount',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'currentDepositQueueHash',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'deliverWithdrawal',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+      },
+      {
+        name: 'target',
+        type: 'address',
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+      },
+      {
+        name: 'senderTag',
+        type: 'bytes32',
+      },
+      {
+        name: 'gasLimit',
+        type: 'uint64',
+      },
+      {
+        name: 'data',
+        type: 'bytes',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'deposit',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+      },
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+      {
+        name: 'encrypted',
+        type: 'tuple',
+        components: [
+          {
+            name: 'ephemeralPubkeyX',
+            type: 'bytes32',
+          },
+          {
+            name: 'ephemeralPubkeyYParity',
+            type: 'uint8',
+          },
+          {
+            name: 'ciphertext',
+            type: 'bytes',
+          },
+          {
+            name: 'nonce',
+            type: 'bytes12',
+          },
+          {
+            name: 'tag',
+            type: 'bytes16',
+          },
+        ],
+      },
+      {
+        name: 'tempoRefundRecipient',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: 'newCurrentDepositQueueHash',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'depositCount',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'depositEncrypted',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+      },
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+      {
+        name: 'encrypted',
+        type: 'tuple',
+        components: [
+          {
+            name: 'ephemeralPubkeyX',
+            type: 'bytes32',
+          },
+          {
+            name: 'ephemeralPubkeyYParity',
+            type: 'uint8',
+          },
+          {
+            name: 'ciphertext',
+            type: 'bytes',
+          },
+          {
+            name: 'nonce',
+            type: 'bytes12',
+          },
+          {
+            name: 'tag',
+            type: 'bytes16',
+          },
+        ],
+      },
+      {
+        name: 'tempoRefundRecipient',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: 'newCurrentDepositQueueHash',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'enableToken',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'enabledTokenAt',
+    inputs: [
+      {
+        name: 'index',
+        type: 'uint256',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'enabledTokenCount',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'encryptionKeyAt',
+    inputs: [
+      {
+        name: 'index',
+        type: 'uint256',
+      },
+    ],
+    outputs: [
+      {
+        name: 'entry',
+        type: 'tuple',
+        components: [
+          {
+            name: 'x',
+            type: 'bytes32',
+          },
+          {
+            name: 'yParity',
+            type: 'uint8',
+          },
+          {
+            name: 'activationBlock',
+            type: 'uint64',
+          },
+        ],
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'encryptionKeyAtBlock',
+    inputs: [
+      {
+        name: 'tempoBlockNumber',
+        type: 'uint64',
+      },
+    ],
+    outputs: [
+      {
+        name: 'x',
+        type: 'bytes32',
+      },
+      {
+        name: 'yParity',
+        type: 'uint8',
+      },
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'encryptionKeyCount',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'hasRole',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+      {
+        name: 'expected',
+        type: 'uint8',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'initialize',
+    inputs: [
+      {
+        name: '_zoneId',
+        type: 'uint32',
+      },
+      {
+        name: '_initialToken',
+        type: 'address',
+      },
+      {
+        name: 'accessEnforced',
+        type: 'bool',
+      },
+      {
+        name: 'gatewayEnforced',
+        type: 'bool',
+      },
+      {
+        name: '_allowedAccounts',
+        type: 'address[]',
+      },
+      {
+        name: '_zoneGateways',
+        type: 'address[]',
+      },
+      {
+        name: '_messenger',
+        type: 'address',
+      },
+      {
+        name: '_admin',
+        type: 'address',
+      },
+      {
+        name: 'initialSequencers',
+        type: 'address[]',
+      },
+      {
+        name: '_threshold',
+        type: 'uint8',
+      },
+      {
+        name: '_verifier',
+        type: 'address',
+      },
+      {
+        name: '_rpcUrl',
+        type: 'string',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'isAccessEnforced',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'isEncryptionKeyValid',
+    inputs: [
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+    ],
+    outputs: [
+      {
+        name: 'valid',
+        type: 'bool',
+      },
+      {
+        name: 'expiresAtBlock',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'isGatewayOpen',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'isSequencer',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'isTokenEnabled',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'lastProcessedDepositNumber',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'lastSyncedTempoBlockNumber',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'leader',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'leaderActivationTempoBlock',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'leaderEpoch',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'maxTempoGasRate',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'messenger',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'pause',
+    inputs: [],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'pauseDeposits',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'pauseExpiry',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'paused',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'pendingAdmin',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'processWithdrawals',
+    inputs: [
+      {
+        name: 'withdrawals',
+        type: 'tuple[]',
+        components: [
+          {
+            name: 'token',
+            type: 'address',
+          },
+          {
+            name: 'senderTag',
+            type: 'bytes32',
+          },
+          {
+            name: 'to',
+            type: 'address',
+          },
+          {
+            name: 'amount',
+            type: 'uint128',
+          },
+          {
+            name: 'memo',
+            type: 'bytes32',
+          },
+          {
+            name: 'gasLimit',
+            type: 'uint64',
+          },
+          {
+            name: 'fallbackNonce',
+            type: 'uint64',
+          },
+          {
+            name: 'callbackData',
+            type: 'bytes',
+          },
+          {
+            name: 'encryptedSender',
+            type: 'bytes',
+          },
+        ],
+      },
+      {
+        name: 'remainingQueue',
+        type: 'bytes32',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'refunds',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+      },
+      {
+        name: 'owner',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: 'amount',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'resume',
+    inputs: [],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'resumeDeposits',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'rpcUrl',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'string',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'sequencerAt',
+    inputs: [
+      {
+        name: 'index',
+        type: 'uint256',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'sequencerCount',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'sequencerEncryptionKey',
+    inputs: [],
+    outputs: [
+      {
+        name: 'x',
+        type: 'bytes32',
+      },
+      {
+        name: 'yParity',
+        type: 'uint8',
+      },
+      {
+        name: 'pubkey',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'sequencerSetVersion',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'sequencerThreshold',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint8',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'setAccessMode',
+    inputs: [
+      {
+        name: 'enforced',
+        type: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setAllowedAccount',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+      {
+        name: 'allowed',
+        type: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setBouncebackGas',
+    inputs: [
+      {
+        name: '_bouncebackGas',
+        type: 'uint64',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setGateway',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+      {
+        name: 'allowed',
+        type: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setGatewayMode',
+    inputs: [
+      {
+        name: 'enforced',
+        type: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setLeader',
+    inputs: [
+      {
+        name: 'newLeader',
+        type: 'address',
+      },
+      {
+        name: 'expectedEpoch',
+        type: 'uint64',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setMaxTempoGasRate',
+    inputs: [
+      {
+        name: '_maxTempoGasRate',
+        type: 'uint128',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setPauseGuardian',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+      {
+        name: 'allowed',
+        type: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setRpcUrl',
+    inputs: [
+      {
+        name: '_rpcUrl',
+        type: 'string',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setSequencerEncryptionKey',
+    inputs: [
+      {
+        name: 'x',
+        type: 'bytes32',
+      },
+      {
+        name: 'yParity',
+        type: 'uint8',
+      },
+      {
+        name: 'popV',
+        type: 'uint8',
+      },
+      {
+        name: 'popR',
+        type: 'bytes32',
+      },
+      {
+        name: 'popS',
+        type: 'bytes32',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setSequencerSet',
+    inputs: [
+      {
+        name: 'newSequencers',
+        type: 'address[]',
+      },
+      {
+        name: 'newThreshold',
+        type: 'uint8',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'setZoneGasRate',
+    inputs: [
+      {
+        name: '_zoneGasRate',
+        type: 'uint128',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'submitBatch',
+    inputs: [
+      {
+        name: 'tempoBlockNumber',
+        type: 'uint64',
+      },
+      {
+        name: 'recentTempoBlockNumber',
+        type: 'uint64',
+      },
+      {
+        name: 'blockTransition',
+        type: 'tuple',
+        components: [
+          {
+            name: 'prevBlockHash',
+            type: 'bytes32',
+          },
+          {
+            name: 'nextBlockHash',
+            type: 'bytes32',
+          },
+        ],
+      },
+      {
+        name: 'depositQueueTransition',
+        type: 'tuple',
+        components: [
+          {
+            name: 'prevProcessedHash',
+            type: 'bytes32',
+          },
+          {
+            name: 'nextProcessedHash',
+            type: 'bytes32',
+          },
+          {
+            name: 'prevDepositNumber',
+            type: 'uint64',
+          },
+          {
+            name: 'nextDepositNumber',
+            type: 'uint64',
+          },
+        ],
+      },
+      {
+        name: 'withdrawalQueueHash',
+        type: 'bytes32',
+      },
+      {
+        name: 'verifierConfig',
+        type: 'bytes',
+      },
+      {
+        name: 'proof',
+        type: 'bytes',
+      },
+      {
+        name: 'nextZoneHeight',
+        type: 'uint256',
+      },
+      {
+        name: 'signatures',
+        type: 'bytes[]',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'tokenConfig',
+    inputs: [
+      {
+        name: '_token',
+        type: 'address',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'tuple',
+        components: [
+          {
+            name: 'enabled',
+            type: 'bool',
+          },
+          {
+            name: 'depositsActive',
+            type: 'bool',
+          },
+        ],
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'tokenEnablementHash',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'transferAdmin',
+    inputs: [
+      {
+        name: 'newAdmin',
+        type: 'address',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'verifier',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'withdrawalBatchIndex',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint64',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'withdrawalQueueHead',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'withdrawalQueueSlot',
+    inputs: [
+      {
+        name: 'queueIndex',
+        type: 'uint256',
+      },
+    ],
+    outputs: [
+      {
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'withdrawalQueueTail',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'zoneGasRate',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint128',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'zoneHeight',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'function',
+    name: 'zoneId',
+    inputs: [],
+    outputs: [
+      {
+        name: '',
+        type: 'uint32',
+      },
+    ],
+    stateMutability: 'view',
+  },
+  {
+    type: 'event',
+    name: 'AbdicationScheduled',
+    inputs: [
+      {
+        name: 'capability',
+        type: 'uint8',
+        indexed: true,
+      },
+      {
+        name: 'effectiveAt',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'AdminTransferStarted',
+    inputs: [
+      {
+        name: 'currentAdmin',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'pendingAdmin',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'AdminTransferred',
+    inputs: [
+      {
+        name: 'previousAdmin',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'newAdmin',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'BatchSubmitted',
+    inputs: [
+      {
+        name: 'withdrawalBatchIndex',
+        type: 'uint64',
+        indexed: true,
+      },
+      {
+        name: 'withdrawalQueueIndex',
+        type: 'uint256',
+        indexed: true,
+      },
+      {
+        name: 'nextProcessedDepositQueueHash',
+        type: 'bytes32',
+        indexed: false,
+      },
+      {
+        name: 'nextBlockHash',
+        type: 'bytes32',
+        indexed: false,
+      },
+      {
+        name: 'withdrawalQueueHash',
+        type: 'bytes32',
+        indexed: false,
+      },
+      {
+        name: 'lastProcessedDepositNumber',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'BouncebackGasUpdated',
+    inputs: [
+      {
+        name: 'bouncebackGas',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'DepositBounceBack',
+    inputs: [
+      {
+        name: 'tempoRefundRecipient',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'bouncebackFee',
+        type: 'uint128',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'DepositBounceBackPending',
+    inputs: [
+      {
+        name: 'tempoRefundRecipient',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'bouncebackFee',
+        type: 'uint128',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'DepositMade',
+    inputs: [
+      {
+        name: 'newCurrentDepositQueueHash',
+        type: 'bytes32',
+        indexed: true,
+      },
+      {
+        name: 'sender',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'netAmount',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'fee',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'ephemeralPubkeyX',
+        type: 'bytes32',
+        indexed: false,
+      },
+      {
+        name: 'ephemeralPubkeyYParity',
+        type: 'uint8',
+        indexed: false,
+      },
+      {
+        name: 'ciphertext',
+        type: 'bytes',
+        indexed: false,
+      },
+      {
+        name: 'nonce',
+        type: 'bytes12',
+        indexed: false,
+      },
+      {
+        name: 'tag',
+        type: 'bytes16',
+        indexed: false,
+      },
+      {
+        name: 'tempoRefundRecipient',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'depositNumber',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'DepositsPaused',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'DepositsResumed',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'EnforcementModesUpdated',
+    inputs: [
+      {
+        name: 'accessMode',
+        type: 'bool',
+        indexed: false,
+      },
+      {
+        name: 'gatewayMode',
+        type: 'bool',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'LeaderUpdated',
+    inputs: [
+      {
+        name: 'previousLeader',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'newLeader',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'epoch',
+        type: 'uint64',
+        indexed: true,
+      },
+      {
+        name: 'activationTempoBlock',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'MaxTempoGasRateUpdated',
+    inputs: [
+      {
+        name: 'maxTempoGasRate',
+        type: 'uint128',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'PortalPaused',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'PortalResumed',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+        indexed: true,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'RefundClaimed',
+    inputs: [
+      {
+        name: 'recipient',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'RoleUpdated',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'prev',
+        type: 'uint8',
+        indexed: false,
+      },
+      {
+        name: 'next',
+        type: 'uint8',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'RpcUrlUpdated',
+    inputs: [
+      {
+        name: 'rpcUrl',
+        type: 'string',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'SequencerEncryptionKeyUpdated',
+    inputs: [
+      {
+        name: 'x',
+        type: 'bytes32',
+        indexed: false,
+      },
+      {
+        name: 'yParity',
+        type: 'uint8',
+        indexed: false,
+      },
+      {
+        name: 'pubkey',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'activationBlock',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'SequencerSetUpdated',
+    inputs: [
+      {
+        name: 'nonce',
+        type: 'uint64',
+        indexed: true,
+      },
+      {
+        name: 'threshold',
+        type: 'uint8',
+        indexed: false,
+      },
+      {
+        name: 'sequencers',
+        type: 'address[]',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'TokenEnabled',
+    inputs: [
+      {
+        name: 'token',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'name',
+        type: 'string',
+        indexed: false,
+      },
+      {
+        name: 'symbol',
+        type: 'string',
+        indexed: false,
+      },
+      {
+        name: 'currency',
+        type: 'string',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'WithdrawalBounceBack',
+    inputs: [
+      {
+        name: 'newCurrentDepositQueueHash',
+        type: 'bytes32',
+        indexed: true,
+      },
+      {
+        name: 'fallbackNonce',
+        type: 'uint64',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'depositNumber',
+        type: 'uint64',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'WithdrawalProcessed',
+    inputs: [
+      {
+        name: 'to',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'senderTag',
+        type: 'bytes32',
+        indexed: true,
+      },
+      {
+        name: 'token',
+        type: 'address',
+        indexed: false,
+      },
+      {
+        name: 'amount',
+        type: 'uint128',
+        indexed: false,
+      },
+      {
+        name: 'callbackSuccess',
+        type: 'bool',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'event',
+    name: 'ZoneGasRateUpdated',
+    inputs: [
+      {
+        name: 'zoneGasRate',
+        type: 'uint128',
+        indexed: false,
+      },
+    ],
+    anonymous: false,
+  },
+  {
+    type: 'error',
+    name: 'AbdicationAlreadyScheduled',
+    inputs: [
+      {
+        name: 'capability',
+        type: 'uint8',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'AccountNotAllowed',
+    inputs: [
+      {
+        name: 'account',
+        type: 'address',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'ActiveLeaderRemoved',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'AlreadyInitialized',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'CallbackDidNotReturnToZone',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'CallbackRejected',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'CapabilityAbdicated',
+    inputs: [
+      {
+        name: 'capability',
+        type: 'uint8',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'DepositBlockCapacityExceeded',
+    inputs: [
+      {
+        name: 'maximum',
+        type: 'uint64',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'DepositTooSmall',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'DepositsNotActive',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'EncryptionKeyExpired',
+    inputs: [
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+      {
+        name: 'activationBlock',
+        type: 'uint64',
+      },
+      {
+        name: 'supersededAtBlock',
+        type: 'uint64',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'GasFeeRateTooHigh',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidBouncebackRecipient',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidCallbackTarget',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidCiphertextLength',
+    inputs: [
+      {
+        name: 'actual',
+        type: 'uint256',
+      },
+      {
+        name: 'expected',
+        type: 'uint256',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'InvalidDepositTransition',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidEncryptionKeyIndex',
+    inputs: [
+      {
+        name: 'keyIndex',
+        type: 'uint256',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'InvalidEphemeralPubkey',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidLeader',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidProof',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidProofOfPossession',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidQuorumCertificate',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidSequencerSet',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidTempoBlockNumber',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'InvalidWithdrawalProof',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'LeaderAlreadyUpdatedThisBlock',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'MustDelegateCall',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NoEncryptionKeyAtBlock',
+    inputs: [
+      {
+        name: 'blockNumber',
+        type: 'uint64',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'NoEncryptionKeySet',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotAdmin',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotFactory',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotPauseAuthority',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotPendingAdmin',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotSelf',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'NotSequencer',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'PolicyForbids',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'PortalIsPaused',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'ReentrantWithdrawal',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'SequencerConfigurationUnchanged',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'StaleLeadershipEpoch',
+    inputs: [
+      {
+        name: 'expected',
+        type: 'uint64',
+      },
+      {
+        name: 'actual',
+        type: 'uint64',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'TokenAlreadyEnabled',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'TokenEnablementBlockCapacityExceeded',
+    inputs: [
+      {
+        name: 'maximum',
+        type: 'uint64',
+      },
+    ],
+  },
+  {
+    type: 'error',
+    name: 'TokenMetadataTooLong',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'TokenNotEnabled',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'TokenTransferPolicyNotSet',
+    inputs: [],
+  },
+  {
+    type: 'error',
+    name: 'TransferFailed',
+    inputs: [],
+  },
+] as const
+
 export const abis = [
   ...accountKeychain,
   ...addressRegistry,
@@ -3090,6 +5323,7 @@ export const abis = [
   ...feeAmm,
   ...validatorConfig,
   ...validatorConfigV2,
+  ...zonePortal,
 ] as const
 
 // Earn source: tempoxyz/earn at 454fa260ded101f970ee7d6bafebf4c3b6ec9095. Do not modify manually.
